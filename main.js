@@ -9,21 +9,21 @@ var CurrentObj = "";
 var BlockImg = "";
 
 function loadPlayer() {
-	fabric.image.fromURL("player.png", function (img){
-		CurrentObj = img;
+	fabric.Image.fromURL("player.png", function (Img){
+		CurrentObj = Img;
 		CurrentObj.scaleToWidth(150);
 		CurrentObj.scaleToHeight(140);
 		CurrentObj.set({
 			top: PlayerY,
 			left: PlayerX
 		});
-		Canvas.add(CurrentObh);
+		Canvas.add(CurrentObj);
 	});
 }
 
 function SetBlockImgVar(getImg) {
-	fabric.image.fromURL(getImg, function (img) {
-		BlockImg = img;
+	fabric.Image.fromURL(getImg, function (Img) {
+		BlockImg = Img;
 		BlockImg.scaleToWidth(BlockW);
 		BlockImg.scaleToHeight(BlockH);
 		BlockImg.set({
@@ -76,7 +76,7 @@ function KeysFunction(e) {
 	}
 
 	if (PressedKey == '87') {
-		SetBlockImgVar('wall.png');
+		SetBlockImgVar('wall.jpg');
 		console.log("W");
 	}
 
